@@ -21,17 +21,10 @@ all selected by training-only cross-validation.
   should work.
 - macOS needs the OpenMP runtime for XGBoost: `brew install libomp`.
 
-## reproduce (Kernel -> Restart Kernel and Run All)
-
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 .venv/bin/jupyter notebook notebook/Liau_Olivia_HW5.ipynb
+(Kernel -> Restart Kernel and Run All)
 ```
 
-Then run `Kernel -> Restart Kernel and Run All...`. The notebook loads the data
-with relative paths of the form `../data/<file>` (forward slashes, no
-absolute paths, per the course guidelines), so it must be launched from the
-repository root and stay in `notebook/` — the working directory of every code
-cell is the `notebook/` folder. The raw data files are read exactly as
-supplied; nothing in `data/` is ever edited.
